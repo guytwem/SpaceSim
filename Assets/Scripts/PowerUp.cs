@@ -13,15 +13,22 @@ public class PowerUp : MonoBehaviour
         controller = ship.GetComponent<ShipController>();
     }
    
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-      
-       
-          Debug.Log("Power Up");
-           controller.forwardSpeed += 10;
+        if(other.gameObject.tag == "Player")
+        {
+            Debug.Log("Power Up");
+            controller.forwardSpeed += 10;
             controller.hoverSpeed += 10;
             controller.strafeSpeed += 10;
             Destroy(gameObject);
+        }
+       
+         
         
     }
+
+   
+
+   
 }

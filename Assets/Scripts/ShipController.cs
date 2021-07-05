@@ -29,7 +29,7 @@ public class ShipController : MonoBehaviour
     public ParticleSystem boosterM;
     public ParticleSystem boosterR;
 
-
+    public GameObject settingsMenu;
 
     private void Start()
     {
@@ -40,6 +40,8 @@ public class ShipController : MonoBehaviour
         boosterL.Stop();
         boosterM.Stop();
         boosterR.Stop();
+
+        settingsMenu.SetActive(false);
     }
 
 
@@ -80,7 +82,13 @@ public class ShipController : MonoBehaviour
 
         transform.position += transform.forward * activeForwardSpeed * Time.deltaTime;
         transform.position += (transform.right * activeStrafeSpeed * Time.deltaTime) + (transform.up * activeHoverSpeed * Time.deltaTime);
-        
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            settingsMenu.SetActive(true);
+            
+        }
+
     }
 
     
