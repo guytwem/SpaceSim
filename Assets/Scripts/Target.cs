@@ -1,21 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
+using Random = UnityEngine.Random;
 
 public class Target : MonoBehaviour
 {
     public float health = 50f;
     public ParticleSystem asteroidDeath;
-    private UI uI;
-    private GameObject canvas;
+    
     private int randNum;
     public GameObject powerUp;
 
-    private void Awake()
+    public void Update()
     {
-        canvas = GameObject.FindGameObjectWithTag("Canvas");
-        uI = canvas.GetComponent<UI>();
+        try
+        {
+            health--;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(health);
+            throw;
+        }
     }
+
+    
 
     public void TakeDamage(float amount)
     {
@@ -34,7 +45,7 @@ public class Target : MonoBehaviour
         
         Destroy(gameObject);
         DropPower();
-        uI.asteroidsDestroyed++;
+        
     }
 
     void DropPower()

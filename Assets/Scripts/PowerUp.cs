@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,16 @@ public class PowerUp : MonoBehaviour
     {
         ship = GameObject.FindGameObjectWithTag("Player");
         controller = ship.GetComponent<ShipController>();
+
+        try
+        {
+            controller.forwardSpeed++;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(controller.forwardSpeed);
+            throw;
+        }
     }
    
     private void OnTriggerEnter(Collider other)

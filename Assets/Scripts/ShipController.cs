@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -67,13 +68,14 @@ public class ShipController : MonoBehaviour
 
         
         if(Input.GetKey(KeyCode.Q) || Input.GetKey(KeyCode.W)|| Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.A)
-            || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.Space))
+           || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.Space))
         {
             boosterL.Play();
             boosterM.Play();
             boosterR.Play();
         }
         else { boosterL.Stop(); boosterM.Stop(); boosterR.Stop(); }
+        
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -90,6 +92,8 @@ public class ShipController : MonoBehaviour
         }
 
     }
+
+   
 
     
 
