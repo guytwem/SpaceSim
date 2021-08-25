@@ -1,5 +1,10 @@
 \hypertarget{class_target}{}\doxysection{Target Class Reference}
 \label{class_target}\index{Target@{Target}}
+
+
+Class that controls asteroids.  
+
+
 Inheritance diagram for Target\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,9 +17,14 @@ Inheritance diagram for Target\+:\begin{figure}[H]
 \mbox{\Hypertarget{class_target_a59d06a7a87c3528d38c35aa3c285c2e5}\label{class_target_a59d06a7a87c3528d38c35aa3c285c2e5}} 
 void {\bfseries Update} ()
 \item 
-\mbox{\Hypertarget{class_target_a643d8db773527731b4f9ea525b1655ad}\label{class_target_a643d8db773527731b4f9ea525b1655ad}} 
-void {\bfseries Take\+Damage} (float amount)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_target_a643d8db773527731b4f9ea525b1655ad}{Take\+Damage}} (float amount)
+\begin{DoxyCompactList}\small\item\em When taking damage play asteroid particle effect Lower health if health hits 0 then asteroid death \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_target_a9f6db8c7b7420060ac64f3ba8dc79493}\label{class_target_a9f6db8c7b7420060ac64f3ba8dc79493}} 
+void {\bfseries Die} ()
+\begin{DoxyCompactList}\small\item\em Destroy game\+Object and randomise power drop. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_target_a9fa30e0b7226258ade8b93cd419e3d9f}\label{class_target_a9fa30e0b7226258ade8b93cd419e3d9f}} 
+void {\bfseries Drop\+Power} ()
+\begin{DoxyCompactList}\small\item\em Randomises wether a powerup will drop when an asteroid dies. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,6 +39,27 @@ Game\+Object {\bfseries power\+Up}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Class that controls asteroids. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_target_a643d8db773527731b4f9ea525b1655ad}\label{class_target_a643d8db773527731b4f9ea525b1655ad}} 
+\index{Target@{Target}!TakeDamage@{TakeDamage}}
+\index{TakeDamage@{TakeDamage}!Target@{Target}}
+\doxysubsubsection{\texorpdfstring{TakeDamage()}{TakeDamage()}}
+{\footnotesize\ttfamily void Target.\+Take\+Damage (\begin{DoxyParamCaption}\item[{float}]{amount }\end{DoxyParamCaption})}
+
+
+
+When taking damage play asteroid particle effect Lower health if health hits 0 then asteroid death 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & \\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/Target.\+cs\end{DoxyCompactItemize}
+C\+:/\+Unity Projects/\+Space\+Sim/\+Assets/\+Scripts/Target.\+cs\end{DoxyCompactItemize}

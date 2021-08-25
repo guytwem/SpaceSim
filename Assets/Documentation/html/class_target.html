@@ -70,6 +70,9 @@ $(function() {
   <div class="headertitle"><div class="title">Target Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class that controls asteroids.  
+ <a href="class_target.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for Target:</div>
 <div class="dyncontent">
@@ -82,9 +85,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a59d06a7a87c3528d38c35aa3c285c2e5"><td class="memItemLeft" align="right" valign="top"><a id="a59d06a7a87c3528d38c35aa3c285c2e5" name="a59d06a7a87c3528d38c35aa3c285c2e5"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Update</b> ()</td></tr>
 <tr class="separator:a59d06a7a87c3528d38c35aa3c285c2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a643d8db773527731b4f9ea525b1655ad"><td class="memItemLeft" align="right" valign="top"><a id="a643d8db773527731b4f9ea525b1655ad" name="a643d8db773527731b4f9ea525b1655ad"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>TakeDamage</b> (float amount)</td></tr>
+<tr class="memitem:a643d8db773527731b4f9ea525b1655ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_target.html#a643d8db773527731b4f9ea525b1655ad">TakeDamage</a> (float amount)</td></tr>
+<tr class="memdesc:a643d8db773527731b4f9ea525b1655ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">When taking damage play asteroid particle effect Lower health if health hits 0 then asteroid death  <a href="class_target.html#a643d8db773527731b4f9ea525b1655ad">More...</a><br /></td></tr>
 <tr class="separator:a643d8db773527731b4f9ea525b1655ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f6db8c7b7420060ac64f3ba8dc79493"><td class="memItemLeft" align="right" valign="top"><a id="a9f6db8c7b7420060ac64f3ba8dc79493" name="a9f6db8c7b7420060ac64f3ba8dc79493"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Die</b> ()</td></tr>
+<tr class="memdesc:a9f6db8c7b7420060ac64f3ba8dc79493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy gameObject and randomise power drop. <br /></td></tr>
+<tr class="separator:a9f6db8c7b7420060ac64f3ba8dc79493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fa30e0b7226258ade8b93cd419e3d9f"><td class="memItemLeft" align="right" valign="top"><a id="a9fa30e0b7226258ade8b93cd419e3d9f" name="a9fa30e0b7226258ade8b93cd419e3d9f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>DropPower</b> ()</td></tr>
+<tr class="memdesc:a9fa30e0b7226258ade8b93cd419e3d9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Randomises wether a powerup will drop when an asteroid dies. <br /></td></tr>
+<tr class="separator:a9fa30e0b7226258ade8b93cd419e3d9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -98,8 +109,37 @@ ParticleSystem&#160;</td><td class="memItemRight" valign="bottom"><b>asteroidDea
 GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>powerUp</b></td></tr>
 <tr class="separator:ac1bac281758adc81affe559ef70bbe13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Class that controls asteroids. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a643d8db773527731b4f9ea525b1655ad" name="a643d8db773527731b4f9ea525b1655ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a643d8db773527731b4f9ea525b1655ad">&#9670;&nbsp;</a></span>TakeDamage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Target.TakeDamage </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>amount</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>When taking damage play asteroid particle effect Lower health if health hits 0 then asteroid death </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amount</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Assets/Scripts/Target.cs</li>
+<li>C:/Unity Projects/SpaceSim/Assets/Scripts/Target.cs</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

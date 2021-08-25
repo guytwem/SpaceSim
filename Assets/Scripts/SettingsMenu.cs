@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
-
+/// <summary>
+/// Controls all the settings for the options menu, includes saving and loading.
+/// </summary>
 public class SettingsMenu : MonoBehaviour
 {
     public Dropdown resolutionDropdown;
@@ -60,19 +62,29 @@ public class SettingsMenu : MonoBehaviour
 	    
     }
     
-    
+    /// <summary>
+    /// Sets resolution of the game
+    /// </summary>
+    /// <param name="resolutionIndex">the currently resolution setting</param>
     public void SetResolution(int resolutionIndex)
     {
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
     }
+    /// <summary>
+    /// Changes the AntiAliasing setting
+    /// </summary>
+    /// <param name="aaIndex">current antiAliasing setting</param>
     public void SetAntiAliasing(int aaIndex)
     {
         QualitySettings.antiAliasing = aaIndex;
         qualityDropdown.value = 6;
         
     }
-
+/// <summary>
+/// Sets the anisotropic filter(enabled/disabled)
+/// </summary>
+/// <param name="anisotropicFilter">current filter setting selected</param>
     public void SetAnisotropicFilter(int anisotropicFilter)
     {
 	    anisotropicDropdown.value = anisotropicFilter;
@@ -89,13 +101,19 @@ public class SettingsMenu : MonoBehaviour
 			    break;
 	    }
     }
-    
+    /// <summary>
+    /// Sets texture quality setting
+    /// </summary>
+    /// <param name="textureIndex">texture quality that is selected</param>
     public void SetTextureQuality(int textureIndex)
     {
 	    QualitySettings.masterTextureLimit = textureIndex;
 	    qualityDropdown.value = 6;
     }
-
+	/// <summary>
+	/// Adjusts the frame rate through a slider
+	/// </summary>
+	/// <param name="frameRate">current frame rate</param>
     public void SetFrameRate(float frameRate)
     {
 	    
@@ -175,7 +193,9 @@ public class SettingsMenu : MonoBehaviour
 		else
 			frameRateSlider.value = currentFrameRate;
 	}
-
+	/// <summary>
+	/// Quits the Application
+	/// </summary>
 	public void Quit()
 	{
 		Application.Quit();

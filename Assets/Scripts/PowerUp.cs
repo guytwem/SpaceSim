@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Class that controls the power up drop
+/// </summary>
 public class PowerUp : MonoBehaviour
 {
     private ShipController controller;
@@ -23,7 +25,10 @@ public class PowerUp : MonoBehaviour
             throw;
         }
     }
-   
+   /// <summary>
+   /// when player ship hits power up trigger the effect and destroy the gameObject
+   /// </summary>
+   /// <param name="other">Player Ship</param>
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")

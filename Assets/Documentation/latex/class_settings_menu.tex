@@ -1,5 +1,10 @@
 \hypertarget{class_settings_menu}{}\doxysection{Settings\+Menu Class Reference}
 \label{class_settings_menu}\index{SettingsMenu@{SettingsMenu}}
+
+
+Controls all the settings for the options menu, includes saving and loading.  
+
+
 Inheritance diagram for Settings\+Menu\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,21 +17,16 @@ Inheritance diagram for Settings\+Menu\+:\begin{figure}[H]
 \mbox{\Hypertarget{class_settings_menu_ab000dc878e097b7cd5ef46ac7b5c127b}\label{class_settings_menu_ab000dc878e097b7cd5ef46ac7b5c127b}} 
 void {\bfseries Set\+Target\+Buffers} (Render\+Texture target\+Buffers)
 \item 
-\mbox{\Hypertarget{class_settings_menu_ae1a101f20fa5dd16dc00b881c112ac14}\label{class_settings_menu_ae1a101f20fa5dd16dc00b881c112ac14}} 
-void {\bfseries Set\+Resolution} (int resolution\+Index)
-\item 
-\mbox{\Hypertarget{class_settings_menu_a8d38f96ee788c719bae88cf12bf16821}\label{class_settings_menu_a8d38f96ee788c719bae88cf12bf16821}} 
-void {\bfseries Set\+Anti\+Aliasing} (int aa\+Index)
-\item 
-\mbox{\Hypertarget{class_settings_menu_a750a2c388d303a949bcfefa34467e6d4}\label{class_settings_menu_a750a2c388d303a949bcfefa34467e6d4}} 
-void {\bfseries Set\+Anisotropic\+Filter} (int anisotropic\+Filter)
-\item 
-\mbox{\Hypertarget{class_settings_menu_afb15b5929a786f2c0c0d1fb551311294}\label{class_settings_menu_afb15b5929a786f2c0c0d1fb551311294}} 
-void {\bfseries Set\+Texture\+Quality} (int texture\+Index)
-\item 
-\mbox{\Hypertarget{class_settings_menu_a1e449d5b8749cbfbf41668d0c8513851}\label{class_settings_menu_a1e449d5b8749cbfbf41668d0c8513851}} 
-void {\bfseries Set\+Frame\+Rate} (float frame\+Rate)
-\item 
+void \mbox{\hyperlink{class_settings_menu_ae1a101f20fa5dd16dc00b881c112ac14}{Set\+Resolution}} (int resolution\+Index)
+\begin{DoxyCompactList}\small\item\em Sets resolution of the game \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_menu_a8d38f96ee788c719bae88cf12bf16821}{Set\+Anti\+Aliasing}} (int aa\+Index)
+\begin{DoxyCompactList}\small\item\em Changes the Anti\+Aliasing setting \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_menu_a750a2c388d303a949bcfefa34467e6d4}{Set\+Anisotropic\+Filter}} (int anisotropic\+Filter)
+\begin{DoxyCompactList}\small\item\em Sets the anisotropic filter(enabled/disabled) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_menu_afb15b5929a786f2c0c0d1fb551311294}{Set\+Texture\+Quality}} (int texture\+Index)
+\begin{DoxyCompactList}\small\item\em Sets texture quality setting \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_menu_a1e449d5b8749cbfbf41668d0c8513851}{Set\+Frame\+Rate}} (float frame\+Rate)
+\begin{DoxyCompactList}\small\item\em Adjusts the frame rate through a slider \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_settings_menu_a5753942ee3ea0847ae8caf099282542f}\label{class_settings_menu_a5753942ee3ea0847ae8caf099282542f}} 
 void {\bfseries Set\+Quality} (int quality\+Index)
 \item 
@@ -38,7 +38,7 @@ void {\bfseries Load\+Settings} (int current\+Resolution\+Index)
 \item 
 \mbox{\Hypertarget{class_settings_menu_a20de251a7ee6042f943058726b7bd625}\label{class_settings_menu_a20de251a7ee6042f943058726b7bd625}} 
 void {\bfseries Quit} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Quits the Application \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -65,6 +65,87 @@ Camera {\bfseries cam}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Controls all the settings for the options menu, includes saving and loading. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_settings_menu_a750a2c388d303a949bcfefa34467e6d4}\label{class_settings_menu_a750a2c388d303a949bcfefa34467e6d4}} 
+\index{SettingsMenu@{SettingsMenu}!SetAnisotropicFilter@{SetAnisotropicFilter}}
+\index{SetAnisotropicFilter@{SetAnisotropicFilter}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{SetAnisotropicFilter()}{SetAnisotropicFilter()}}
+{\footnotesize\ttfamily void Settings\+Menu.\+Set\+Anisotropic\+Filter (\begin{DoxyParamCaption}\item[{int}]{anisotropic\+Filter }\end{DoxyParamCaption})}
+
+
+
+Sets the anisotropic filter(enabled/disabled) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em anisotropic\+Filter} & current filter setting selected\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_settings_menu_a8d38f96ee788c719bae88cf12bf16821}\label{class_settings_menu_a8d38f96ee788c719bae88cf12bf16821}} 
+\index{SettingsMenu@{SettingsMenu}!SetAntiAliasing@{SetAntiAliasing}}
+\index{SetAntiAliasing@{SetAntiAliasing}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{SetAntiAliasing()}{SetAntiAliasing()}}
+{\footnotesize\ttfamily void Settings\+Menu.\+Set\+Anti\+Aliasing (\begin{DoxyParamCaption}\item[{int}]{aa\+Index }\end{DoxyParamCaption})}
+
+
+
+Changes the Anti\+Aliasing setting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em aa\+Index} & current anti\+Aliasing setting\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_settings_menu_a1e449d5b8749cbfbf41668d0c8513851}\label{class_settings_menu_a1e449d5b8749cbfbf41668d0c8513851}} 
+\index{SettingsMenu@{SettingsMenu}!SetFrameRate@{SetFrameRate}}
+\index{SetFrameRate@{SetFrameRate}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{SetFrameRate()}{SetFrameRate()}}
+{\footnotesize\ttfamily void Settings\+Menu.\+Set\+Frame\+Rate (\begin{DoxyParamCaption}\item[{float}]{frame\+Rate }\end{DoxyParamCaption})}
+
+
+
+Adjusts the frame rate through a slider 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame\+Rate} & current frame rate\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_settings_menu_ae1a101f20fa5dd16dc00b881c112ac14}\label{class_settings_menu_ae1a101f20fa5dd16dc00b881c112ac14}} 
+\index{SettingsMenu@{SettingsMenu}!SetResolution@{SetResolution}}
+\index{SetResolution@{SetResolution}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{SetResolution()}{SetResolution()}}
+{\footnotesize\ttfamily void Settings\+Menu.\+Set\+Resolution (\begin{DoxyParamCaption}\item[{int}]{resolution\+Index }\end{DoxyParamCaption})}
+
+
+
+Sets resolution of the game 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resolution\+Index} & the currently resolution setting\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_settings_menu_afb15b5929a786f2c0c0d1fb551311294}\label{class_settings_menu_afb15b5929a786f2c0c0d1fb551311294}} 
+\index{SettingsMenu@{SettingsMenu}!SetTextureQuality@{SetTextureQuality}}
+\index{SetTextureQuality@{SetTextureQuality}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{SetTextureQuality()}{SetTextureQuality()}}
+{\footnotesize\ttfamily void Settings\+Menu.\+Set\+Texture\+Quality (\begin{DoxyParamCaption}\item[{int}]{texture\+Index }\end{DoxyParamCaption})}
+
+
+
+Sets texture quality setting 
+
+
+\begin{DoxyParams}{Parameters}
+{\em texture\+Index} & texture quality that is selected\\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-Assets/\+Scripts/Settings\+Menu.\+cs\end{DoxyCompactItemize}
+C\+:/\+Unity Projects/\+Space\+Sim/\+Assets/\+Scripts/Settings\+Menu.\+cs\end{DoxyCompactItemize}

@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Class that controls ship movement and particle effects
+/// </summary>
 public class ShipController : MonoBehaviour
 {
     public float forwardSpeed = 10f;

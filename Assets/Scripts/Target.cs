@@ -1,10 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Schema;
+using System.Xml;
+using UnityEditor.Build.Reporting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
+/// <summary>
+/// Class that controls asteroids.
+/// </summary>
 public class Target : MonoBehaviour
 {
     public float health = 50f;
@@ -27,7 +33,12 @@ public class Target : MonoBehaviour
     }
 
     
-
+/// <summary>
+/// When taking damage play asteroid particle effect
+/// Lower health
+/// if health hits 0 then asteroid death
+/// </summary>
+/// <param name="amount"></param>
     public void TakeDamage(float amount)
     {
         asteroidDeath.Play();
@@ -39,16 +50,20 @@ public class Target : MonoBehaviour
             
         }
     }
-
-    void Die()
+/// <summary>
+/// Destroy gameObject and randomise power drop.
+/// </summary>
+    public void Die()
     {
         
         Destroy(gameObject);
         DropPower();
         
     }
-
-    void DropPower()
+/// <summary>
+/// Randomises wether a powerup will drop when an asteroid dies.
+/// </summary>
+    public void DropPower()
     {
         GameObject powerUpClone;
         randNum = Random.Range(0, 4);

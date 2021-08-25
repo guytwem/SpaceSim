@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Class that controls the spawning of asteroids
+/// </summary>
 public class Spawner : MonoBehaviour
 {
     [SerializeField] PoolManager asteroidPool;
