@@ -156,6 +156,7 @@ MonoBehaviour:
   boosterL: {fileID: 0}
   boosterM: {fileID: 0}
   boosterR: {fileID: 0}
+  settingsMenu: {fileID: 0}
 --- !u!114 &7412508074863589944
 MonoBehaviour:
   m_ObjectHideFlags: 0

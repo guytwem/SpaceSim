@@ -14,7 +14,9 @@ public class SettingsMenu : MonoBehaviour
     public Dropdown textureDropdown;
     public Dropdown anisotropicDropdown;
     public Slider frameRateSlider;
+    public Slider colorDepthSlider;
     private int currentFrameRate = 120;
+    
     public Camera cam;
     Resolution[] resolutions;
 
@@ -22,6 +24,7 @@ public class SettingsMenu : MonoBehaviour
     {
 	    QualitySettings.vSyncCount = 0;
 	    Application.targetFrameRate = currentFrameRate;
+	    colorDepthSlider.value = cam.depth;
     }
 
     // Start is called before the first frame update
@@ -54,12 +57,14 @@ public class SettingsMenu : MonoBehaviour
 	    }
     }
 
-    public void SetTargetBuffers(RenderTexture targetBuffers)
+    public void SetTargetBuffers(float _depth)
     {
-	    RenderBuffer color = new RenderBuffer();
-	    cam.SetTargetBuffers(color, color);
 	    
-	    
+	    colorDepthSlider.value = _depth;
+	    cam.depth = _depth;
+
+
+
     }
     
     /// <summary>
